@@ -43,7 +43,7 @@
         }
 
         .nav-content {
-/*             max-width: 1200px; */
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -85,7 +85,7 @@
         }
 
         .section-content {
-/*             max-width: 1200px; */
+            max-width: 1200px;
             width: 100%;
             padding: 2rem;
             text-align: center;
@@ -116,7 +116,7 @@
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             font-weight: 300;
             opacity: 0.9;
-/*             max-width: 600px; */
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -136,7 +136,7 @@
         .section-2 p {
             font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             font-weight: 400;
-/*             max-width: 800px; */
+            max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
         }
@@ -157,7 +157,7 @@
         .section-3 p {
             font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             font-weight: 400;
-/*             max-width: 800px; */
+            max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
         }
@@ -250,8 +250,8 @@
             <div class="logo">Logo</div>
             <ul class="nav-links">
                 <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">Storia</a></li>
-                <li><a href="#section3">Contatti</a></li>
+                <li><a href="#section2">Sezione 2</a></li>
+                <li><a href="#section3">Sezione 3</a></li>
             </ul>
         </div>
     </nav>
@@ -259,8 +259,8 @@
     <!-- Section 1 - Hero -->
     <section id="section1" class="section-1">
         <div class="section-content">
-            <h1>88ers</h1>
-            <p>"Dalla polvere di Philadelphia al palcoscenico della Drunkest, non siamo solo una squadra: siamo un'idea. Gli 88ers nascono dal puro, incontaminato amore per il gioco, quello che ti fa rimanere sveglio fino a tardi per un tiro all'ultimo secondo. Siamo l'anima di chi vive il basket come una religione. In ogni palla a spicchi, in ogni canestro, c'è la nostra storia, fatta di sacrificio e di un'unica, ossessiva sete di vittoria. Questo è il nostro motto, la nostra fede, la nostra promessa. Drunkest, il trono ci aspetta."</p>
+            <h1>Titolo Principale</h1>
+            <p>Descrizione principale del tuo progetto. Inserisci qui il contenuto che vuoi mostrare nella sezione hero.</p>
         </div>
         <div class="scroll-indicator"></div>
         
@@ -273,38 +273,53 @@
     <!-- Section 2 -->
     <section id="section2" class="section-2">
         <div class="section-content">
-            <h2>Le Radici Della Grandezza</h2>
-            <p>Fondata nel 2020 da un'intuizione di due menti audaci, i soci onorari Domenico Fiorilli e Pietro Noschese, la franchigia degli 88ers è nata con un solo, inequivocabile obiettivo: dominare la lega Drunkest e stabilire, una volta per tutte, chi merita il titolo di "più forte in campo".</p>
+            <h2>Seconda Sezione</h2>
+            <p>Contenuto della seconda sezione. Qui puoi inserire informazioni dettagliate, caratteristiche del prodotto, servizi offerti o qualsiasi altro contenuto che desideri evidenziare.</p>
         </div>
     </section>
 
     <!-- Section 3 -->
     <section id="section3" class="section-3">
         <div class="section-content">
-            <h2>Contatti</h2>
-            <p>Indirizzo Sede:
-1912 Drunkest Avenue,
-Philadelphia, PA 19106
-Stati Uniti
-
-Email Ufficiale:
-88eightyeighters@gmail.com
-
-Social Media:
-
-Instagram: @88ersofficial
-
-Twitter: @88ersDrunkest
-
-Facebook: /88ersFranchise
-
-Soci Fondatori Onorari:
-
-Domenico Fiorilli & Pietro Noschese</p>
+            <h2>Terza Sezione</h2>
+            <p>Contenuto della terza sezione. Questa può essere utilizzata per call-to-action, contatti, testimonianze o conclusioni del tuo messaggio principale.</p>
         </div>
     </section>
 
     <script>
+        // Carousel functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const container = document.getElementById('carouselContainer');
+            container.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function previousSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play carousel
+        setInterval(nextSlide, 5000);
+
         // Smooth scrolling and animation on scroll
         const sections = document.querySelectorAll('.section-content');
         const navbar = document.querySelector('.navbar');

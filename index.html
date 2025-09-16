@@ -479,9 +479,20 @@
                 height: 300px;
             }
 
-            .contact-grid {
+            .footer-top {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+            .footer-middle {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                justify-content: center;
             }
         }
 
@@ -570,61 +581,56 @@
         </div>
     </section>
 
-    <!-- Section 3 -->
+      <!-- Section 3 - Footer -->
     <section id="section3" class="section-3">
-        <div class="section-content">
-            <h2>Contatti</h2>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h3>Azienda</h3>
+                    <ul>
+                        <li><a href="#">Chi Siamo</a></li>
+                        <li><a href="#">Carriere</a></li>
+                        <li><a href="#">Investitori</a></li>
+                        <li><a href="#">Sostenibilità</a></li>
+                        <li><a href="#">Press Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Prodotti</h3>
+                    <ul>
+                        <li><a href="#">Servizio 1</a></li>
+                        <li><a href="#">Servizio 2</a></li>
+                        <li><a href="#">Servizio 3</a></li>
+                        <li><a href="#">App Mobile</a></li>
+                        <li><a href="#">Integrazioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Risorse</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Documentazione</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li><a href="mailto:88eightyeighters@gmail.com">88eightyeighters@gmail.com</a></li>
+                        <li><a href="#">1912 Drunkest Avenue<br>Philadelphia, PA 19106</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+            </div>
             
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-header">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        <span class="contact-title">Sede</span>
-                    </div>
-                    <div class="contact-content">
-                        1912 Drunkest Avenue,<br>
-                        Philadelphia, PA 19106<br>
-                        Stati Uniti
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-header">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <span class="contact-title">Email</span>
-                    </div>
-                    <div class="contact-content">
-                        <a href="mailto:88eightyeighters@gmail.com">88eightyeighters@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-header">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4.8c0-.33.07-.66.18-.97L5.17 10H8.5c-.25-.71-.49-1.46-.68-2.23-.44-1.61-.79-2.94-.79-4.77 0-1.22 1.25-1.72 2.24-.56.36.42.67 1.02.96 1.78C10.55 5.39 10.84 6.81 11.1 8H17c.83 0 1.5.67 1.5 1.5 0 .17-.03.33-.08.5L16.5 18"/>
-                        </svg>
-                        <span class="contact-title">Social Media</span>
-                    </div>
-                    <div class="contact-content">
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <span>Instagram: @88ersofficial</span>
-                            </a>
-                            <a href="#" class="social-link">
-                                <span>Twitter: @88ersDrunkest</span>
-                            </a>
-                            <a href="#" class="social-link">
-                                <span>Facebook: /88ersFranchise</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-middle">
+            <div class="footer-middle">
                 <div class="footer-logo">
                     <img src="./assets/logo.png" alt="Logo" />
                     <span class="company-name">88ers</span>
@@ -646,7 +652,6 @@
                     <a href="#">Informativa Privacy</a>
                     <a href="#">Gestisci Cookies</a>
                 </div>
-            </div>
             </div>
         </div>
     </section>
